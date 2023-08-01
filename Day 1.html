@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 1 : 30 days javascript challenge</title>
+</head>
+<script>
+    
+// * in javascript the main thing is whatever i learn , bus pata hona chaiye ki koi bhee concept kis tarah se and kis situtaion me use karna hain :
+
+//! 1) Parameters :-
+
+// console.log(parameter1,parameter2, parameter3);
+//* console.log it contain the multiple parameters :
+
+//! 2) comments :-
+//* in javascript  2 ways to do the comments in code : 
+//* 1) // and 2) /* */
+
+//! 3) adding javascript to web page : 4 ways :
+/*
+ 1) inline script : add script in tag
+ 2) internal script : add script in head or body using script tag 
+ 3) external script : add script external means create a js file and add the source path to body or head
+ 4) multiple external script : */
+
+//! 4) Introduction to data types :
+/*
+1. primitive data types :
+- number    -> positive, negative, zero number and fractional numbers :
+- string    -> collection of characters
+- boolean   -> true or false
+- undefined -> not assing the value to a variable 
+- null      -> empty value
+
+2. referece data types :
+*/
+let name
+console.log(name)
+//* here name is undefined because i dont assign the value to a name variable.
+
+//! 5) checking the data types of variable or value:
+let firstName;
+console.log(typeof firstName)
+firstName="Satyam"
+console.log(firstName)
+
+//! 6) variable :
+/*  -> variable are used to store the data in memory location. 
+    -> when a variable is declared, a memory location is reserved.
+    -> when a variable is assigned to a  value (Data), the memory space will be filled with that data.
+    -> use the var, let and  const keywords to declare the varible in javscript
+*/
+</script>
+
+<!-- styling on html elements : -->
+<style>
+body{
+    background-color: #65ca73;
+}
+.container{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+     
+}
+button{
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 10px 5px 100px rgb(38, 53, 192);
+    font-size: 40px;
+    color: wheat;
+    background: #000;
+}
+button:active{
+    background-color: white;
+    color: black;
+}
+ 
+
+</style>
+<body>
+    <div class="container">
+        <button  onclick="alert(`hello world`)">Click</button>  
+    </div>
+  
+</body>
+</html>
+
+
+
+

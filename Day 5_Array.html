@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 : 30 days javascript challenge</title>
+</head>
+<script>
+ /* array problem solving : */
+ let number=[1,2,3,4,5]
+ console.log(`first item :${number[0]}`)
+ console.log(`last item :${number[number.length-1]}`)
+ console.log(`middle item :${number[Math.floor(number.length/2)]}`)
+
+let mixedDataTypes=["string",Number,Boolean,null,undefined,NaN,Symbol]
+console.log(`size of mixeddatatypes of : ${mixedDataTypes.length}`)
+ 
+
+let company=["Facebook","Google","Microsoft","Apple","IBM","Oracle","Amazon"];
+
+console.log(company)
+console.log(company.length)
+console.log(`first company ${company[0]}`)
+console.log(`middle company ${company[Math.floor(company.length/2)]}`)
+console.log(`last company ${company[company.length-1]}`)
+
+for(let name of company){
+    console.log(name.toUpperCase())
+}
+let amazon=company[company.length-1]
+company.pop()
+console.log(`${company} and ${amazon} are bi IT companies.`)
+
+if(company.includes("Flipcart")){
+    console.log(`yes it is exit.`)
+}else{
+    console.log(`company is not find.`)
+}
+
+// =============================================
+const numbers = [0, 3.14, 9.81, 37, 98.6, 100]
+console.log(number)
+console.log(`${number}`)
+
+company=company;
+console.log(company)
+
+// sort company :
+console.log(company.sort())
+console.log(company.reverse())
+console.log(company.slice(0,3))
+console.log(company.slice(company.length-3,company.length))
+console.log(company.length)
+console.log(`middle company :${company.slice(2,5).join(" ")}`)
+
+console.log(`original company array :${company}`)
+company.shift()
+console.log(company)
+company.pop()
+console.log(company)
+company.splice(3,5)
+console.log(company)
+company.splice(0)
+console.log(`remove all item : ${company}`)
+
+// level 2:
+// remove all punctuatoin
+// string into array:
+// count no of words in array :
+let text1='I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+
+console.log(text1.replace(/[./,]/g,""))
+console.log(text1.replace(/[./,]/g,"").split(" ").length)
+
+
+// 
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
+shoppingCart.unshift("Meat")
+console.log(shoppingCart)
+shoppingCart.push("Sugar")
+console.log(shoppingCart)
+shoppingCart.splice(shoppingCart.length-2,1)
+console.log(shoppingCart)
+// get the index of Tea:
+let tea=shoppingCart.indexOf("Tea")
+shoppingCart[tea]="Green Tea"
+console.log(shoppingCart)
+
+// 
+const country=["india","america","new york","uk"]
+if(country.includes("Ethiopia")){
+    console.log("ETHIOPIA")
+}else{
+    country.push("ETHIOPIA")
+}
+console.log(country)
+
+// 
+const webTechs=["javascript","html","css","nodejs"]
+if(webTechs.includes("Saas")){
+    console.log("Saas is a CSS preprocess.")
+}else{
+    webTechs.push("Sass")
+    console.log(webTechs)
+}
+
+//
+const frontEnd = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+const backEnd = ['Node','Express', 'MongoDB']
+let fullStack=frontEnd.concat(backEnd)
+console.log(fullStack)
+
+
+
+// 
+const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+ages.sort()
+console.log(ages)
+console.log(`minimum age of student ${ages[0]}`)
+console.log(`maximum age of student ${ages[ages.length-1]}`)
+let firstMiddleItem=ages[Math.floor(ages.length/2)]
+console.log(firstMiddleItem)
+let secoundMiddleItem=ages[Math.floor(ages.length/2)+1]
+console.log(secoundMiddleItem)
+console.log(Math.floor(firstMiddleItem+secoundMiddleItem)/2)
+let sum=0
+for(let i=0;i<ages.length;i++){
+    sum+=ages[i]
+}
+console.log(sum/ages.length)
+let avg=sum/ages.length;
+let min=ages[0]
+let max=ages[ages.length-1]
+
+let diffMin=Math.abs(min-avg)
+console.log(diffMin)
+let diffMax=Math.abs(max-avg)
+console.log(diffMax)
+if(diffMin<diffMax){
+    console.log(`${diffMin} is smallest`)
+}else if(diffMin>diffMax){
+    console.log(`${diffMax} is smallest.`)
+}else
+{
+    console.log(`${diffMax} and ${diffMin} both are equal.`)
+}
+
+
+console.log(`range of age ${ages[ages.length-1]-ages[0]}`)
+
+
+// 
+const countries = [
+  'Afghanistan',
+  'Albania',
+  'Algeria',
+  'Andorra',
+  'Angola',
+  'Antigua and Barbuda',
+  'Argentina',
+  'Armenia',
+  'Australia',
+  'Austria',
+  'Azerbaijan',
+  'Bahamas',
+  'Bahrain',
+  'Bangladesh',
+  'Barbados',
+  'Belarus',
+  'Belgium',
+  'Belize',
+  'Benin',
+  'Bhutan',
+  'Bolivia',
+  'Bosnia and Herzegovina',
+  'Botswana',
+  'Brazil',
+  'Brunei',
+  'Bulgaria',
+  'Burkina Faso',
+  'Burundi',
+  'Cambodia',
+  'Cameroon',
+  'Canada',
+  'Cape Verde',
+  'Central African Republic',
+  'Chad',
+  'Chile',
+  'China',
+  'Colombi',
+  'Comoros',
+  'Congo (Brazzaville)',
+  'Congo',
+  'Costa Rica',
+  "Cote d'Ivoire",
+  'Croatia',
+  'Cuba',
+  'Cyprus',
+  'Czech Republic',
+  'Denmark',
+  'Djibouti',
+  'Dominica',
+  'Dominican Republic',
+  'East Timor (Timor Timur)',
+  'Ecuador',
+  'Egypt',
+  'El Salvador',
+  'Equatorial Guinea',
+  'Eritrea',
+  'Estonia',
+  'Ethiopia',
+  'Fiji',
+  'Finland',
+  'France',
+  'Gabon',
+  'Gambia, The',
+  'Georgia',
+  'Germany',
+  'Ghana',
+  'Greece',
+  'Grenada',
+  'Guatemala',
+  'Guinea',
+  'Guinea-Bissau',
+  'Guyana',
+  'Haiti',
+  'Honduras',
+  'Hungary',
+  'Iceland',
+  'India',
+  'Indonesia',
+  'Iran',
+  'Iraq',
+  'Ireland',
+  'Israel',
+  'Italy',
+  'Jamaica',
+  'Japan',
+  'Jordan',
+  'Kazakhstan',
+  'Kenya',
+  'Kiribati',
+  'Korea, North',
+  'Korea, South',
+  'Kuwait',
+  'Kyrgyzstan',
+  'Laos',
+  'Latvia',
+  'Lebanon',
+  'Lesotho',
+  'Liberia',
+  'Libya',
+  'Liechtenstein',
+  'Lithuania',
+  'Luxembourg',
+  'Macedonia',
+  'Madagascar',
+  'Malawi',
+  'Malaysia',
+  'Maldives',
+  'Mali',
+  'Malta',
+  'Marshall Islands',
+  'Mauritania',
+  'Mauritius',
+  'Mexico',
+  'Micronesia',
+  'Moldova',
+  'Monaco',
+  'Mongolia',
+  'Morocco',
+  'Mozambique',
+  'Myanmar',
+  'Namibia',
+  'Nauru',
+  'Nepal',
+  'Netherlands',
+  'New Zealand',
+  'Nicaragua',
+  'Niger',
+  'Nigeria',
+  'Norway',
+  'Oman',
+  'Pakistan',
+  'Palau',
+  'Panama',
+  'Papua New Guinea',
+  'Paraguay',
+  'Peru',
+  'Philippines',
+  'Poland',
+  'Portugal',
+  'Qatar',
+  'Romania',
+  'Russia',
+  'Rwanda',
+  'Saint Kitts and Nevis',
+  'Saint Lucia',
+  'Saint Vincent',
+  'Samoa',
+  'San Marino',
+  'Sao Tome and Principe',
+  'Saudi Arabia',
+  'Senegal',
+  'Serbia and Montenegro',
+  'Seychelles',
+  'Sierra Leone',
+  'Singapore',
+  'Slovakia',
+  'Slovenia',
+  'Solomon Islands',
+  'Somalia',
+  'South Africa',
+  'Spain',
+  'Sri Lanka',
+  'Sudan',
+  'Suriname',
+  'Swaziland',
+  'Sweden',
+  'Switzerland',
+  'Syria',
+  'Taiwan',
+  'Tajikistan',
+  'Tanzania',
+  'Thailand',
+  'Togo',
+  'Tonga',
+  'Trinidad and Tobago',
+  'Tunisia',
+  'Turkey',
+  'Turkmenistan',
+  'Tuvalu',
+  'Uganda',
+  'Ukraine',
+  'United Arab Emirates',
+  'United Kingdom',
+  'United States',
+  'Uruguay',
+  'Uzbekistan',
+  'Vanuatu',
+  'Vatican City',
+  'Venezuela',
+  'Vietnam',
+  'Yemen',
+  'Zambia',
+  'Zimbabwe'
+]
+console.log(countries)
+
+// slice fist ten countries from countries array :
+console.log(countries.slice(0,10))
+console.log(countries.length)
+console.log(countries.slice(50,100))
+// countries divide into two equal array if it is even : other wise one more country for thefirst half :
+let firstHalf=[]
+let secoundHalf=[]
+firstHalf.push(countries.slice(0,Math.floor(countries.length/2)+1))
+console.log(firstHalf)
+secoundHalf.push(countries.slice(Math.ceil(countries.length/2)))
+console.log(secoundHalf)
+
+
+</script>
+<style>
+   
+
+</style>
+<body>
+    
+</body>
+</html>

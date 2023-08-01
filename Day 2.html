@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2 : 30 days javascript challenge</title>
+  </head>
+  <!-- javascript -->
+  <script>
+    // Exercise :
+    let challenge = "30 Days of JavaScript";
+    console.log(challenge);
+
+    console.log(challenge.length);
+    console.log(challenge.toUpperCase());
+    console.log(challenge.toLowerCase());
+
+    // extract the some portion word in challenge string :
+    console.log(
+      `extract the first word of challenge variable :${challenge.substr(0, 2)}`
+    );
+
+    console.log(
+      `extract the last word of challenge variable :${challenge.substr(-10)}`
+    );
+
+    console.log(`substring :${challenge.substring(10, -2)}`);
+
+    //  slice the days of javaScript from 30 days of javascript :
+    let daysOfJavaScript = challenge.substr(3);
+    console.log(daysOfJavaScript);
+
+    // check the String word having in challenge variable value:
+
+    console.log(challenge.includes("Script"));
+
+    // split the string into aray :
+    console.log(challenge.split());
+    console.log(challenge.split(""));
+    console.log(challenge.split(" "));
+
+    let fruits = "apple,banana,orange,grape";
+    console.log(fruits.split(",", 2));
+
+    let fruitsWithSpace = "apple, banana, orange, grape";
+    console.log(fruitsWithSpace.split(", ", 3));
+
+    const complexString = "apple, banana; orange - grape";
+
+    console.log(complexString.split(/,|-|;/));
+
+    let company = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon";
+
+    console.log(company.split(","));
+
+    // replace the string :
+    console.log(
+      challenge.replace("30 Days of JavaScript", "30 Days of Python")
+    );
+
+    //  access the character using index :
+    console.log(challenge.charAt(15));
+    console.log(challenge);
+
+    // character code or unicode of j
+    console.log(challenge.charCodeAt(11));
+
+    // find the index of first occurance of character in string :
+    console.log(challenge.indexOf("a"));
+    // find the last occurance of character index in string
+    console.log(challenge.lastIndexOf("a"));
+
+    let because =
+      "You cannot end a sentence with because because because is a conjunction";
+    // find the first occurace of because:
+    console.log(because.split(" ").indexOf("because"));
+    // fidn the last occurance of because in because variable :
+
+    console.log(because.split(" ").lastIndexOf("because"));
+    let searchItem = "because";
+    console.log(because.indexOf("because"));
+    console.log(because.search(searchItem));
+
+    let challengeWithWhiteSpace = " 30 Days Of JavaScript ";
+
+    // Remove the spaces tabs and new lines of string:
+    // trim() remove the begining and ending space in string ;
+
+    console.log(challengeWithWhiteSpace.trim());
+
+    console.log(challenge.startsWith(3));
+    console.log(challenge.endsWith("t"));
+
+    // match():
+    //  find how many a's in 30 days of javascript ;
+    console.log(challenge.match(/a/gi));
+
+    let firstName = "satyam";
+    let lastName = " pawar";
+    // concat the firstName and lastName :
+    console.log(firstName.concat(lastName));
+
+    // repeat method to use the print challenge 2 times :
+    console.log(challenge.repeat(2));
+
+    console.log(
+      "The quote There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another."
+    );
+
+    console.log(
+      `Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.`
+    );
+
+    let tenstring = "10";
+    let float="9.8"
+
+    tenstring = parseInt(tenstring);
+    console.log(tenstring === 10);
+    console.log(parseFloat(float)===9.8)
+
+    let python="python"
+    let jargon="jargon"
+
+    console.log(python.includes("on") && jargon.includes("on"))
+
+    jargon="I hope this course is not full of jargon."
+
+    console.log(jargon.includes("jargon"))
+
+    // generate random number between 0 to 100:
+    
+    console.log(Math.floor(Math.random()*(100-0))+0)
+    // generate the random number between 50 and 100:
+    console.log(Math.floor(Math.random()*(100-50))+50)
+    console.log(Math.floor(Math.random()*(255-0))+0)
+
+const jsRandomNumber=Math.floor(Math.random()*(("JavaScript").length-0))+0;
+
+console.log(("JavaScript").charAt(jsRandomNumber))
+
+console.log(`1 1 1 1 1\n2 1 2 4 8\n3 1 3 9 27\n4 1 4 16 64\n5 1 5 25 125`)
+
+
+console.log(because.substr(because.indexOf("because"),"because because because".length))
+
+console.log("because because because".length)
+console.log(because.indexOf("because"))
+
+let love='Love is the best thing in this world. Some found their love and some are still looking for their love.';
+let loveCount=love.match(/love/ig)
+console.log(loveCount)
+console.log(loveCount.length)
+
+// remove the special characters :
+const sentence = '%I $am@% a %tea@cher%, &and& I lo%#ve %te@a@ching%;. The@re $is no@th@ing; &as& mo@re rewarding as educa@ting &and& @emp%o@weri@ng peo@ple. ;I found tea@ching m%o@re interesting tha@n any ot#her %jo@bs. %Do@es thi%s mo@tiv#ate yo@u to be a tea@cher!? %Th#is 30#Days&OfJavaScript &is al@so $the $resu@lt of &love& of tea&ching'
+
+let cleanCode=sentence.replace(/[%$@&!?;#]/g,"").replace(/[^a-zA-Z\s]/g,"").toLowerCase();
+console.log(cleanCode)
+
+console.log(cleanCode.split(" "))
+cleanCode=cleanCode.toLowerCase();
+cleanCode=cleanCode.split(" ");
+
+// Calculate the total annual income of the person by extracting the numbers from the following text. 'He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+
+let income='He earns 5000 euro from salary per month, 10000 euro annual bonus, 15000 euro online courses per month.'
+let words=income.split(" ")
+console.log(words.indexOf("15000"))
+
+// find most frequent word in string :
+// 1: string convert into lowercase and if string has characters and punctuation so remove the punctuation and create a clean code and split the string into word :
+
+let word="The quick brown fox jumps over the lazy dog, the quick brown fox"
+console.log(cleanCode)
+
+// create a empty object :
+let frequency={}
+let maxFrequency=0;
+let mostFrequencyWord=""
+let string=cleanCode;
+
+for(let i=0;i<string.length;i++){
+  // select first word
+  let word=string[i];
+  if(frequency[word]){
+    frequency[word]+=1;
+  }else{
+    frequency[word]=1
+  }
+  // console.log(frequency)
+  // we have frequency ki ye word kitni baar aaya hain :
+  // bus ab ek loop lagana hain and find karna hain :
+  if(frequency[word]>maxFrequency){
+    mostFrequencyWord=word
+    maxFrequency=frequency[word];
+  
+  }
+
+}
+
+console.log(mostFrequencyWord,maxFrequency)
+
+
+</script>
+
+  <!-- style -->
+  <style></style>
+  <body></body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4 : 30 days javascript challenge</title>
+  </head>
+  <script>
+    // 1) :
+    // let age=parseInt(prompt("Enter your  age :"))
+    // if(age>18){
+    //     alert("you are old enough to drive.")
+    // }else{
+    //     alert(`you are left with ${18-age} years to drive.`)
+    // }
+
+    //--------------------------------------------------------
+
+    // 2)
+    // let myAge=21;
+    // let yourAge=parseInt(prompt("Enter your age"))
+    // if(myAge<yourAge){
+    //     console.log(`you are ${yourAge-myAge} years older than me.`)
+    // }else{
+    //     console.log(`i am ${myAge-yourAge} years older than you.`)
+    // }
+
+    //------------------------------------------------------------
+
+    // 3)
+
+    // let a=4,b=3;
+
+    // let biggerNumber=a>b?`${a} is greater than ${b}.`:`${b} is less than ${a}.`;
+    // console.log(biggerNumber)
+
+    // if(a>b){
+    //     console.log(`${a} is greater than ${b}.`);
+    // }else{
+    //     `${b} is less than ${a}.`
+    // }
+
+    // ------------------------------------------------------------
+
+    // 4)
+
+    // let number=parseInt(prompt("Enter number :"))
+    // if(number%2===0){
+    //     console.log(`${number} is even.`)
+    // }else{
+    //     console.log(`${number} is odd.`)
+    // }
+
+    // ------------------------------------------------------------------
+
+    // 5)
+    // let marks=parseInt(prompt("Enter you score :"))
+
+    // if (marks>=80 && marks<=100){
+    //     console.log("A grade.")
+    // }else if( marks>=70 && marks<=79){
+    //     console.log("B grade.")
+    // }else if(marks>=60 && marks<=69 ){
+    //     console.log("C grade.")
+    // }else if(marks>=50 && marks<=59 ){
+    //     console.log("D grade.")
+    // }else if(marks>=0 && marks<=49 ){
+    //     console.log("F grade.")
+    // }
+
+    // ------------------------------------------------------------
+
+    // 6)
+
+    // let month=prompt("Enter the Month :");
+
+    // if(month==="September" || month==="October" || month==="November"){
+    //     console.log(`${month} is Autumn season.`)
+    // }else if(month==="December"||month==="January"||month==="February"){
+    //     console.log(`${month} is Winter season.`)
+    // }else if(month==="March"||month==="April"||month==="May"){
+    //     console.log(`${month} is Spring season.`)
+    // }else if(month==="June"||month==="July"||month==="August"){
+    //     console.log(`${month} is Summer season.`)
+    // }
+
+    // -----------------------------------------------------------
+
+    // 7)
+
+    // let day=prompt("What is the day today?")
+    //     day=day.toLowerCase();
+        
+    //     if(day==="saturday"){
+    //         console.log(`${day} is a Weekend day.`)
+    //     }else{
+    //         console.log(`${day} is a Working day.`)
+    //     }
+
+    // ---------------------------------------------------------------
+
+    // 8) 
+
+    // let month=prompt("Enter a month :")
+    //     month=month.toLowerCase()
+
+    //     switch(month){
+    //         case "january":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "february":console.log(`${month} has 28 Days.`);
+    //         break;
+    //         case "march":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "april":console.log(`${month} has 30 Days.`);
+    //         break;
+    //         case "may":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "june":console.log(`${month} has 30 Days.`);
+    //         break;
+    //         case "july":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "august":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "september":console.log(`${month} has 30 Days.`);
+    //         break;
+    //         case "october":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         case "november":console.log(`${month} has 30 Days.`);
+    //         break;
+    //         case "december":console.log(`${month} has 31 Days.`);
+    //         break;
+    //         default:console.log("invalid month please try again.")
+    //     }
+    // -------------------------------------------------
+
+    // 9)
+    let year = parseInt(prompt("Enter a year:"));
+let month = prompt("Enter a month:");
+month = month.toLowerCase();
+
+switch (month) {
+  case "january":
+  case "march":
+  case "may":
+  case "july":
+  case "august":
+  case "october":
+  case "december":
+    console.log(`${month} has 31 Days.`);
+    break;
+
+  case "february":
+    if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+      console.log(`${month} has 29 days.`);
+    } else {
+      console.log(`${month} has 28 days.`);
+    }
+    break;
+
+  case "april":
+  case "june":
+  case "september":
+  case "november":
+    console.log(`${month} has 30 Days.`);
+    break;
+
+  default:
+    console.log("Invalid month. Please try again.");
+}
+
+
+      
+          
+
+  </script>
+  <style></style>
+  <body></body>
+</html>
