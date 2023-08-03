@@ -99,6 +99,24 @@
     console.log(person.hasOwnProperty("firstName"));
     console.log(person.hasOwnProperty("address"));
 
+    //* how remove key from Object:
+    const data = {
+      id: 1,
+      name: "neeraj",
+      email: "test@1234.com",
+      password: "some password",
+    };
+    // before delete print the data object :
+    console.log(`${data} before delete a password key from data object.`);
+    console.log(data);
+    delete data.password;
+    // after delete a password property :
+    console.log(`${data} after delete a password key from data object.`);
+    console.log(data);
+
+    //* 2nd way destructuring a obejct:
+    let { password, ...allData } = data;
+    console.log(allData); // all data contain all data of data  without contain password it's called destructuring:
     // complete basics of object :
     //todo : Exercises :
     // ==================================================================================
