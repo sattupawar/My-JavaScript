@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    // //* console object methods :
+    // // we use console object methods to show output on the browser console and we use document write to show output on the browser document.
+    // // both methods used only for testing and debugging purposes.
+
+    // //? =======================================
+
+    // //* console.log():
+    // // to show output on the browser console :
+    // console.log("30 days of javascript");
+
+    // // we can substitute values :
+    // console.log("%d %s of javascript", 30, "days");
+
+    // // we can style the logging output %c ;
+    // // we can style logging message using css.
+
+    // console.log("%c30 days of javascript", "color:yellow");
+    // console.log(
+    //   "%c30 days%c %cof%c %cjavascript%c",
+    //   "color:orange",
+    //   "",
+    //   "color:white",
+    //   "",
+    //   "color:green"
+    // );
+
+    // // ==============================================================
+
+    // //* console.warn() :
+    // // we use console.warn() to give warning on browser.
+    // // for instance to inform or warn deprecation of version of a package or bad practices:
+
+    // console.warn("This is a warning");
+    // console.warn("you are using react. do not touch the dom.");
+
+    // // ==============================================================
+
+    // //* console.error() :
+    // // the console.error() methods shows an error message :
+    // console.error("This is an error message");
+
+    // // ==============================================================
+
+    // //* console.table() :
+    // // display data as a table on the console.
+    // // display tabular data as a table.
+    // // console.table() take one required argument data,which must be an array or an object and one additional optional parameter columns :
+
+    // let nums = [1, 2, 3, 4];
+    // console.table(nums);
+    // let person = {
+    //   name: "sattu",
+    //   age: 21,
+    // };
+    // console.table(person);
+
+    // person = [
+    //   {
+    //     name: "sattu",
+    //     age: 21,
+    //   },
+    //   {
+    //     name: "krunal",
+    //     age: 20,
+    //   },
+    //   {
+    //     name: "dhru",
+    //     age: 19,
+    //   },
+    //   {
+    //     name: "yash",
+    //     age: 18,
+    //   },
+    // ];
+    // console.table(person);
+
+    // ============================================================
+
+    //* console.time() :
+    // starts a timer you can use to track how long an operation takes.
+    // you give each timer a unique name
+    // // when you call console.timeEnd() with the same name , the browser will output the time,in millisecounds, that elapsed since the timer was started.
+    // let countries = [
+    //   ["Finland", "Helsinki"],
+    //   ["Sweden", "Stockholm"],
+    //   ["Norway", "Oslo"],
+    // ];
+    // console.time("Regular for loop");
+    // for (let i = 0; i < countries.length; i++) {
+    //   console.log(countries[i][0], countries[i][1]);
+    // }
+    // console.timeEnd("Regular for loop");
+
+    // // according the output the regular for loop is slower than for of and for each loop:
+
+    // // ============================================================
+
+    // //* console.info()
+    // // it displays information message on broswer console.
+    // console.info("30 days of javascript");
+
+    // ============================================================
+
+    //* console.assert()
+    // used to writes an error message to the console if the assertion is false:
+    // if the assertion is true nothing happens:
+    // the first parameter is an assertion expression :
+    // if the expression is false an assertion failed error message will be displayed :
+
+    // console.assert(4 < 3, "3 is not greather than 4");
+
+    // // ==============================================================
+
+    // //* console.group()
+    // // can help to group different log groups :
+    // const names = ["Asabeneh", "Brook", "David", "John"];
+    // const desh = [
+    //   ["Finland", "Helsinki"],
+    //   ["Sweden", "Stockholm"],
+    //   ["Norway", "Oslo"],
+    // ];
+    // const user = {
+    //   name: "Asabeneh",
+    //   title: "Programmer",
+    //   country: "Finland",
+    //   city: "Helsinki",
+    //   age: 250,
+    // };
+    // const users = [
+    //   {
+    //     name: "Asabeneh",
+    //     title: "Programmer",
+    //     country: "Finland",
+    //     city: "Helsinki",
+    //     age: 250,
+    //   },
+    //   {
+    //     name: "Eyob",
+    //     title: "Teacher",
+    //     country: "Sweden",
+    //     city: "London",
+    //     age: 25,
+    //   },
+    //   {
+    //     name: "Asab",
+    //     title: "Instructor",
+    //     country: "Norway",
+    //     city: "Oslo",
+    //     age: 22,
+    //   },
+    //   {
+    //     name: "Matias",
+    //     title: "Developer",
+    //     country: "Denmark",
+    //     city: "Copenhagen",
+    //     age: 28,
+    //   },
+    // ];
+
+    // console.group("Names");
+    // console.log(names);
+    // console.groupEnd();
+
+    // console.group("users");
+    // console.log(users);
+    // console.log(user);
+    // console.groupEnd();
+
+    // // ========================================================
+
+    // //* console.count()
+    // // it prints the number of times the console.count() is called.
+    // // it helpful to count the number of times a function is called :
+
+    // let king = () => {
+    //   console.count("i am king");
+    // };
+    // king();
+    // king();
+
+    // // ============================================================
+
+    // //* console.clear()
+    // // it helps to clear the browser console
+    // console.clear();
+
+    // //========================================================================================================================================
+
+    // // Exercise :
+
+    // console.table(countries);
+    // console.table(countries);
+
+    // let even = [1, 2, 3, 4];
+    // console.group("even");
+    // console.log(even);
+    // console.groupEnd();
+
+    // console.assert(10 > 2 * 10, "20 not less than 10");
+
+    // console.warn("warning");
+    // console.error("error");
+
+    // // ========================================================================================================================================
+
+    //* check the speed diff among while,for,forof,foreach :
+    console.log("while loop using:");
+    console.time("start");
+    let i = 0;
+    while (i <= 10) {
+      console.log(i);
+      i++;
+    }
+    console.timeEnd("start");
+
+    console.log("regular for loop using :");
+    console.time("stat");
+    for (let i = 0; i <= 10; i++) {
+      console.log(i);
+    }
+    console.timeEnd("stat");
+
+    console.log("using for of loop");
+    console.time("start again");
+    let odd = [1, 2, 3, 4, 5];
+    for (let temp of odd) {
+      console.log(temp);
+    }
+    console.timeEnd("start again");
+
+    console.log("for each loop");
+    console.time("start");
+    odd.forEach((temp) => {
+      console.log(temp);
+    });
+    console.timeEnd("start");
+  </script>
+</html>

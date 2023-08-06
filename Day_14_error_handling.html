@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //* Error Handling :
+    // js is loosely typed language
+    // sometimes you will get a runtiime error, when you try to access an undefined variable or call undefined function etc.
+
+    try {
+      // code that may throw an error
+    } catch (err) {
+      // code to be executed if an error occurs
+    } finally {
+      // code to be executed regardless of an error occurs or not
+    }
+
+    // try : try statement allows us to defined a block of code to be tested for errors, while it is being executed.
+    // wrap suspicious code that may throw an error in try block.
+
+    // catch : write code to do something in catch block when an error occurs.
+    // catch block can have parameters that will give you error information.
+    // catch block is used to log an error or display specific message to the user.
+
+    // finally : finally block can be used to complete the remaining task or reset variables that might have changed before error occurred in try block.
+
+    // try {
+    //   let lastName = "pawar";
+    //   let fullName = fistName + " " + lastName;
+    // } catch (err) {
+    //   // console.error(err)
+    //   console.log(err.name);
+    //   console.log(err.message);
+    // } finally {
+    //   console.log("in any case i will be executed");
+    // }
+
+    // let lastName = "hello";
+    // let fullName = firstName + " " + lastName;
+    // console.log(fullName);
+
+    //* throw :
+    // allows us to create a custom error.
+    // use the throw statement to throw an exception
+    // when you throw an exception, expression specifies the value of the exception,
+
+    let learnThrowError = () => {
+      let message;
+      let x = prompt("Enter a number :");
+      try {
+        if (x == "") throw "empty";
+        if (isNaN(x)) throw "not a number";
+        x = Number(x);
+        if (x < 5) throw "too low";
+        if (x > 10) throw "too high";
+      } catch (err) {
+        console.log(err);
+      }
+    };
+    // learnThrowError();
+
+    //================================================================//
+
+    //* Error types :
+
+    // 1) ReferenceError
+    // A ReferenceError is thrown if we use a variable that has not been declared.
+
+    // 2) syntaxError :
+    // syntax proble throw error :
+
+    // 3) TypeError :
+    // a type error has occurred :
+
+    let num = 10;
+    console.log(num.toLowerCase());
+
+    
+  </script>
+</html>
