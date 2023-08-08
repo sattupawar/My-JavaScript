@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="title" id="first-title">First Title</h1>
+    <h1 class="title" id="secound-title">Secound Title</h1>
+    <h1 class="title" id="third-title">Third Title</h1>
+    <h1></h1>
+  </body>
+  <script>
+    // it is possible to get,create,append,or remove html elements : using javascript:
+
+    // Getting elements by tagName,className,id,querySelector
+    let allTitles = document.getElementsByTagName("h1");
+    allTitles = document.getElementsByClassName("title");
+    let firstId = document.getElementById("first-title");
+    console.log(allTitles);
+    console.log(allTitles.length);
+    for (let i = 0; i < allTitles.length; i++) {
+      console.log(allTitles[i]);
+    }
+    console.log(firstId)
+
+    // document.querySelector("") : it return first element 
+    // document.querySelectorAll("") : it return array :
+
+    //==============================================================
+
+    // Adding attributes :
+    // before adding a attribute in element we should has tag :
+    // ṇow we has h1 4th empty tag :
+    let fourthH1=document.querySelector("h1")
+    fourthH1[3].className="title"
+    fourthH1[3].id="fourth-title"
+    // user setAttribute(attribute,name)
+    fourthH1[3].setAttribute("")
+    //==============================================================
+
+    // Removing class :
+
+    //==============================================================
+
+    // Adding text to html element :
+
+    //==============================================================
+
+    // Adding style to html content :
+  </script>
+</html>

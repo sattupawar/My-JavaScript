@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="Orange">Orange</button>
+    <button id="black">Black</button>
+  </body>
+  <script>
+    function clickHandler(color) {
+      return function () {
+        document.body.style.backgroundColor = `${color}`;
+      };
+    }
+
+    document.getElementById("Orange").onclick = clickHandler("yellow");
+    document.getElementById("black").onclick = clickHandler("black");
+
+    //* Closure :
+    // function init() {
+    //   let name = "Mozilla"; // name is a local variable created by init
+    //   function displayName() {
+    //     // displayName() is the inner function, that forms the closure
+    //     console.log(name); // use variable declared in the parent function
+    //   }
+    //   displayName();
+    // }
+    // init();
+
+    // function outer() {
+    //   let num = 21;
+
+    //   function inner() {
+    //     let secret = "rocket";
+    //     console.log(num);
+    //   }
+    //   function inner2() {
+    //     console.log(num);
+    //   }
+    //   inner();
+    //   inner2();
+    // }
+    // outer();
+
+    //* Now i'm understand better what is lexical scopping :
+
+    //* But what is closures :
+    function outer() {
+      let num = 21;
+
+      function inner() {
+        let secret = "rocket";
+        console.log(num);
+      }
+
+      return inner;
+    }
+    // outer();
+    let ans = outer();
+    ans();
+
+    //todo : real world use of closures
+
+    //===================================
+
+    // if inner function access the variable of outer function then it is called closure.
+    // function outerFunction() {
+    //   let count = 0;
+    //   function innerFunction() {
+    //     count++;
+    //     return count;
+    //   }
+    //   return innerFunction;
+    // }
+    // let outerFunctionAns = outerFunction();
+    // console.log(outerFunctionAns());
+
+    // function outerFunction() {
+    //   let count = 0;
+    //   return function () {
+    //     count++;
+    //     console.log(count);
+    //   };
+    // }
+    // outerFunction();
+
+    function outerFunction() {
+      let count = 0;
+
+      function plusOne() {
+        count++;
+        return count;
+      }
+      function minusOne() {
+        count--;
+        return count;
+      }
+      return {
+        plusOne: plusOne(),
+        minusOne: minusOne(),
+      };
+    }
+    let one = outerFunction();
+    console.log(one.plusOne);
+
+    //++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    function personAccount() {
+      let firstName = "satyam";
+      let lastName = "pawar";
+      let incomes = [];
+      let expenses = [];
+      //   now create inner functions :
+
+      function totalIncome() {
+        let sum = 0;
+        incomes.forEach((e) => {
+          sum += e;
+        });
+        return sum;
+      }
+      function totalExpenses() {
+        let sum = 0;
+        expenses.forEach((e) => {
+          sum += e;
+        });
+        return sum;
+      }
+      function addIncome(value) {
+        incomes.push(value);
+      }
+      function addExpenses(value) {
+        expenses.push(value);
+      }
+      function accountBalance() {
+        return totalIncome() - totalExpenses();
+      }
+      return {
+        totalIncome: totalIncome,
+        totalExpenses: totalExpenses,
+        addIncome: addIncome,
+        addExpenses: addExpenses,
+        accountBalance: accountBalance,
+      };
+    }
+    ans = personAccount();
+    ans.addIncome(200);
+    ans.addExpenses(100);
+    ans.addIncome(100);
+
+    console.log(ans.totalIncome());
+    console.log(ans.accountBalance());
+  </script>
+</html>
